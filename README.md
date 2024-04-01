@@ -1,6 +1,6 @@
 # A Trainable Spectral-Spatial Sparse Coding Model for Hyperspectral Image Restoration
 
-The official PyTorch implementation of the paper _A Trainable Spectral-Spatial Sparse Coding Model for Hyperspectral Image Restoration_ (Neurips 2021) is available at https://github.com/inria-thoth/T3SC/tree/main. However, we encounter several issues while runing it. 
+The official PyTorch implementation of the paper _A Trainable Spectral-Spatial Sparse Coding Model for Hyperspectral Image Restoration_ (Neurips 2021) is available at https://github.com/inria-thoth/T3SC/tree/main. However, we encounter several issues while runing it, the purpose of this project was to debug those errors.
 
 [`[arxiv]`](https://arxiv.org/abs/2111.09708)
 
