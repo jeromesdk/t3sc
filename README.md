@@ -55,7 +55,7 @@ You can also have the 95% confidence interval of the metrics by executing the st
 $ python statistics.py
 ```
 
-Some pre-trained models can be found [here](http://pascal.inrialpes.fr/data2/tbodrito/t3sc/).
+Some pre-trained models can be found [here](http://pascal.inrialpes.fr/data2/tbodrito/t3sc/). Two pretrained models are already presents, you can use them.
 
 ### Example
 To test ICVL with constant noise:
