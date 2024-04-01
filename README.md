@@ -49,6 +49,12 @@ To test from a checkpoint:
 $ python main.py mode=test data={icvl,dcmall} noise={constant,uniform,correlated,stripes} [+noise-specific params] model.ckpt=path/to/ckpt
 ```
 
+You can also have the 95% confidence interval of the metrics by executing the statistic python file:
+
+```
+$ python statistics.py
+```
+
 Some pre-trained models can be found [here](http://pascal.inrialpes.fr/data2/tbodrito/t3sc/).
 
 ### Example
@@ -56,3 +62,7 @@ To test ICVL with constant noise:
 ```
 $ python main.py mode=test data=icvl noise=constant noise.params.sigma=50 model.ckpt=path/to/icvl_constant_50.ckpt
 ```
+
+## Slides of the presentation
+
+The presentation of the project is available, check the file `computational imaging.pdf`.
