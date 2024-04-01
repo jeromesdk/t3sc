@@ -1,6 +1,6 @@
 # A Trainable Spectral-Spatial Sparse Coding Model for Hyperspectral Image Restoration
 
-Official PyTorch implementation of the paper _A Trainable Spectral-Spatial Sparse Coding Model for Hyperspectral Image Restoration_ (Neurips 2021).
+The official PyTorch implementation of the paper _A Trainable Spectral-Spatial Sparse Coding Model for Hyperspectral Image Restoration_ (Neurips 2021) is available at https://github.com/inria-thoth/T3SC/tree/main. However, we encounter several issues while runing it. 
 
 [`[arxiv]`](https://arxiv.org/abs/2111.09708)
 
@@ -9,10 +9,10 @@ Official PyTorch implementation of the paper _A Trainable Spectral-Spatial Spars
 
 ## Installation
 
-Developped with Python 3.8.8.
+Developped with Python 3.8.8. We ran the code on a RTX3060. Please, visit the official pytorch website to see the version of pytorch to install: https://pytorch.org/
 ```
 $ git clone https://github.com/inria-thoth/T3SC
-$ cd T3SC && pip install -r requirements.txt
+$ cd t3sc && pip install -r requirements.txt
 ```
 
 ## Training
@@ -29,14 +29,11 @@ To enable this feature, use `model.beta=1` for both training and testing.
 
 ### Examples
 
+Runing takes a very long time. We highly recommand to download the trained mmodel so that you don't need to train it. If you still want to train it, set the `num_workers` according to your configuration in the file `dcmall.yaml` or `icvl.yaml` located in `t3sc/config/data`
+
 ICVL dataset with constant gaussian noise:
 ```
 $ python main.py data=icvl noise=constant noise.params.sigma=50
-```
-
-Washington DC Mall dataset with band-dependant gaussian noise:
-```
-$ python main.py data=dcmall model.beta=1 noise=uniform noise.params.sigma_max=55
 ```
 
 ICVL dataset with stripes noise:
@@ -58,15 +55,4 @@ Some pre-trained models can be found [here](http://pascal.inrialpes.fr/data2/tbo
 To test ICVL with constant noise:
 ```
 $ python main.py mode=test data=icvl noise=constant noise.params.sigma=50 model.ckpt=path/to/icvl_constant_50.ckpt
-```
-
-## Citation
-If you find this work useful for your research, please cite:
-```
-@article{bodrito2021trainable,
-  title={A Trainable Spectral-Spatial Sparse Coding Model for Hyperspectral Image Restoration},
-  author={Bodrito, Theo and Zouaoui, Alexandre and Chanussot, Jocelyn and Mairal, Julien},
-  journal={Adv. in Neural Information Processing Systems (NeurIPS)},
-  year={2021}
-}
 ```
