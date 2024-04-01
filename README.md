@@ -20,9 +20,9 @@ $ cd t3sc && pip install -r requirements.txt
 
 To launch a training:
 ```
-$ python main.py data={icvl,dcmall} noise={constant,uniform,correlated,stripes} [+noise-specific params]
+$ python main.py data=icvl noise={constant,uniform,correlated,stripes} [+noise-specific params]
 ```
-Data should be downloaded automatically to `data/ICVL` or `data/DCMall` if it is not there already.
+Data should be downloaded automatically to `data/ICVL` if it is not there already.
 
 **NOTE**: For uniform and stripes noises, better results are obtained with Noise Adaptive Sparse Coding.
 To enable this feature, use `model.beta=1` for both training and testing.
